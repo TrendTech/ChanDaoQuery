@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-4.1.xsd ">
+
+    <bean id="datasource"
+          class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+        <property name="driverClassName" value="com.mysql.jdbc.Driver" />
+        <!--注意一下&characterEncoding要修改为&amp;characterEncoding-->
+        <property name="url" value="jdbc:mysql://10.10.95.243:3306/zentaobiz?useUnicode=true&amp;characterEncoding=utf-8"/>
+        <property name="username" value="readonly"/>
+        <property name="password" value="QvMtYoev4t9c" />
+    </bean>
+
+    <bean id="bugDaoImp"
+          class="com.ChanDao.Dao.Imp.BugDaoImp">
+        <property name="datasource" ref="datasource" />
+    </bean>
+    <bean id="severityDaoImp"
+          class="com.ChanDao.Dao.Imp.SeverityDaoImp">
+        <property name="datasource" ref="datasource" />
+    </bean>
+    <bean id="productDaoImp"
+          class="com.ChanDao.Dao.Imp.ProductDaoImp">
+        <property name="datasource" ref="datasource" />
+    </bean>
+</beans>
