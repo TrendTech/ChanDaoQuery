@@ -28,7 +28,7 @@ public class DateUtil {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        return result;
+        return Math.abs(result);
     }
 
     public static String parseMilliseconds(long millisecond) {

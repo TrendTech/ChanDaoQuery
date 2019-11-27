@@ -1,8 +1,7 @@
 package com.ChanDao.Dao.Imp;
 
 import com.ChanDao.Dao.SeverityDao;
-import com.ChanDao.controller.BugMapper;
-import com.ChanDao.controller.SeverityMapper;
+import com.ChanDao.mapper.SeverityMapper;
 import com.ChanDao.model.Severity;
 import org.springframework.jdbc.core.JdbcTemplate;
 

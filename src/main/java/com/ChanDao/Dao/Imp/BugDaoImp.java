@@ -1,7 +1,7 @@
 package com.ChanDao.Dao.Imp;
 
 import com.ChanDao.Dao.BugDao;
-import com.ChanDao.controller.BugMapper;
+import com.ChanDao.mapper.BugMapper;
 import com.ChanDao.model.Bug;
 import org.springframework.jdbc.core.JdbcTemplate;
 import javax.sql.DataSource;
